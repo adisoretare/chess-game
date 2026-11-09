@@ -27,6 +27,7 @@ main{
 #board{
     display: grid;
     grid-template-columns: repeat(8,1fr);
+    grid-template-rows: repeat(8, 1fr);
     width:100%;
     aspect-ratio: 1;
 }
@@ -37,4 +38,11 @@ main{
 
 .dark{
     background: hsl(240, 22%, 26%);
+}
+.square {
+  display: grid;
+  place-items: center;
+  font-size: 36px;
+  color: #111111;
+  min-height: 0;
 }
