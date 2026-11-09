@@ -16,7 +16,7 @@ const symbols = {
 };
 
 
-
+let selectedSquare=null;
 
 for(let row=0;row<8;row++)
 {
@@ -36,6 +36,19 @@ for(let row=0;row<8;row++)
         else{
             square.classList.add("dark");
         }
+        square.addEventListener("click",function(){
+            if(piece==".")
+            {
+                return;
+            }
+            if(selectedSquare!==null)
+            {
+                selectedSquare.classList.remove("selected");
+            }
+            selectedSquare=square;
+            selectedSquare.classList.add("selected");
+        })
+
         board.appendChild(square);
     }
 }
